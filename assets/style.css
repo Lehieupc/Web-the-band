@@ -313,10 +313,16 @@ input{
     .content .content-section{
         width: 90%;
     }
+    .modal-contener{
+        width: 70%;
+    }
 }
 @media only screen and (max-width: 739px){
     .content .content-section{
         width: 100%;
+    }
+    .modal-contener{
+        width: 95%;
     }
     .text-deconation,
     .search-bt
