@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 html{
+    scroll-behavior: smooth;
     font-family: "Lato", sans-serif;
 }
-.header{
+#header{
     height: 46px;
     background-color: black;
     position: fixed;
@@ -14,6 +15,24 @@ html{
     top: 0px;
     left: 0px;
     right: 0px;
+}
+.row{
+    overflow: hidden;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col-3{
+    width: 33.33333%;
+}
+.col{
+    padding: 0px 8px;
+    float: left;
+}
+.col-2{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
 }
 .nav{
     display: flex;
@@ -28,7 +47,7 @@ html{
     display: inline-block;
     text-decoration: none;
     color: #fff;    
-    padding: 12px 24px;
+    padding: 13.6px 20px;
 }
 .subnav li a{
     display: block;
@@ -115,16 +134,13 @@ html{
 }
 .team{
     padding-top: 32px;
-    padding-bottom: 32px;
-    overflow: hidden;
+    padding-bottom: 100px;
 }
-.team .band-member{
-    width: 33.33333%;
+.band-member{
     border-radius: 4px;
-    float: left;
     text-align: center;
 }
-.band-member .img-band-member{
+.img-band-member{
     width: 60%;
     margin-top: 20px;
 }
@@ -153,14 +169,12 @@ html{
 .text-gray{
     color: gray;
 }
-.tour-places{
-    overflow: hidden;
-    margin: 32px -8px 0px;
+.mg-top-32{
+    margin-top: 32px;
 }
-.tour-places .tour-item{
-    width: 33.3333%;
-    float: left;
-    padding: 0px 8px;
+.place-img{
+    width: 100%;
+    display: block;
 }
 .place-content{
     padding: 20px 12px;
@@ -176,10 +190,6 @@ html{
 .btn-buy-tickets:hover{
     background-color: gray;
     cursor: pointer;
-}
-.tour-item .place-img{
-    width: 100%;
-    vertical-align: middle;
 }
 .text-padding{
     padding: 10px 0px;
@@ -256,21 +266,6 @@ html{
 .open-modal{
     visibility: visible;
 }
-.row{
-    width: 100%;
-    display: table;
-    margin-left: 8px;
-}
-.col{
-    padding: 0px 8px;
-}
-.col-2{
-    width: 50%;
-    float: left;
-}
-.col-full{
-    width: 100%;
-}
 .contact-info i{
     width: 30px;
     display: inline-block;
@@ -313,4 +308,52 @@ input{
 }
 .brand-icon i:hover{
     color: gray;
+}
+@media only screen and (min-width: 740px) and (max-width: 1024px){
+    .content .content-section{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 739px){
+    .content .content-section{
+        width: 100%;
+    }
+    .text-deconation,
+    .search-bt
+    {
+        display: none;
+    }
+    .col-2,
+    .col-3{
+        width: 100%;
+        margin-top: 10px;
+    }
+    #header{
+        overflow: hidden;
+    }
+    .nav{
+        display: block;
+        position: static;
+    }
+    #nav-home{
+        width: 88%;
+    }
+    .nav > li > a{
+        display: block; 
+    }
+    .subnav li a{
+        padding: 15px 40px 15px 20px
+    }
+    .ti-menu{
+        background-color: #000;
+        color: #fff;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 15px;
+    }
+    .ti-menu:hover{
+        color: #000;
+        background-color: #ccc;
+    }
 }
