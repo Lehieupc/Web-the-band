@@ -16,6 +16,9 @@ html{
     left: 0px;
     right: 0px;
 }
+.full-width{
+    width: 100%;
+}
 .row{
     overflow: hidden;
     margin-left: -8px;
@@ -323,6 +326,9 @@ input{
     }
     .modal-contener{
         width: 95%;
+    }
+    .btn-buy-tickets{
+        padding: 15px 12px;
     }
     .text-deconation,
     .search-bt
